@@ -16,7 +16,7 @@ func (s *IntSet) Has(x int) bool {
 
 func (s *IntSet) Len() int {
 	cnt := 0
-	for i, word := range s.words {
+	for _, word := range s.words {
 		for word != 0 {
 			cnt++
 			word &= word - 1
